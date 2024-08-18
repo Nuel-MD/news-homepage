@@ -1,0 +1,225 @@
+*, 
+*::before, 
+*::after {
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+body {
+    display: flex;
+    margin: 0px;
+    position: relative;
+    height: 100%;
+    padding-bottom: 100px;
+}
+.container{
+    padding: 20px;
+}
+.content{
+    flex: 1;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    align-items: center;
+}
+#remove{
+    z-index: 100;
+    display: flex;
+    justify-content: end;
+    margin-bottom: 70px;
+}
+.dropdown{
+    padding: 20px;
+    padding-top: 46px;
+    position: absolute;
+    background-color: white;
+    height: 100%;
+    top:0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    min-width: 65%;
+    z-index: 1;
+    gap: 25px ;
+    color: hsl(240, 100%, 5%);
+}
+.header span:hover{
+    cursor: url('./assets/images/pointinghand.svg' ) , pointer;
+    color: hsl(5, 85%, 63%);
+}
+.item h3:hover{
+    cursor: url('./assets/images/pointinghand.svg' ) , pointer;
+    color: hsl(5, 85%, 63%);
+}
+.info h3:hover{
+    cursor: url('./assets/images/pointinghand.svg' ) , pointer;
+    color: hsl(35, 77%, 62%);
+}
+.passage button:hover{
+    cursor: url('./assets/images/pointinghand.svg' ) , pointer;
+    background-color: hsl(240, 100%, 5%);
+    color: hsl(36, 100%, 99%);
+
+}
+
+.content>div>img{
+    width: 100%;
+}
+.content h1{
+    color: hsl(240, 100%, 5%);
+    font-size: 40px;
+    font-weight: 800;
+}
+.passage p{
+    font-size: 15px;
+    color:hsl(236, 13%, 42%);
+}
+.passage button{
+    width: 50%;
+    padding: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: hsl(240, 100%, 5%);
+    background-color: hsl(5, 85%, 63%);
+    border: 0px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+.info {
+    background-color: hsl(240, 100%, 5%);
+    padding: 20px;
+    margin-bottom: 30px;
+}
+.info h2{
+    color: hsl(35, 77%, 62%);
+    font-size: 30px;
+}
+.info h3{
+    color: hsl(36, 100%, 99%);
+    font-size: 20px;
+    font-weight: 700;
+}
+.info p{
+    color: hsl(236, 13%, 42%);
+    font-size: 15px;
+    font-weight: 400;
+}
+hr{
+    border: 0px;
+    height: 1px;
+    background-color: hsl(236, 13%, 42%);
+}
+.item {
+    display: flex;
+    height: 160px;
+    margin-bottom: 30px;
+    width: 100%;
+    gap: 20px;
+}
+.item> div{
+    flex: 3;
+}
+.item>img{
+    height: 100%;
+    flex: 1;
+}
+.item p{
+    margin: 0px;
+    color: hsl(236, 13%, 42%);
+}
+.item h2{
+    margin: 0px;
+    color: hsl(5, 85%, 63%);
+    font-weight: 700;
+
+}
+.item h3{
+    margin: 0px;
+    color: hsl(240, 100%, 5%);
+    font-weight: 700;
+}
+
+.flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+@media( min-width: 500px){
+    body{
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        height: 100vh;        
+    }
+    .header{
+        margin-top: 0px;
+        margin-bottom: 10px;
+    }
+    
+    .menu svg{
+        display: none;
+    }
+    
+    .container{
+        width: 80%;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+    }
+    .dropdown{
+        display: block;
+        padding: 0px;
+    padding-top: 0;
+    position:relative;
+    background-color: none;
+    height: 100%;
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    min-width: 100%;
+    z-index: 0;
+    gap: 25px ;
+    color: hsl(240, 100%, 5%);
+    }
+    .content{
+        display: grid;
+        grid-template-rows: 1.2fr 1fr 170px ;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 25px;
+        flex: 1;
+    }
+    .image{
+        grid-area: 1/1/2/3;
+        background-image: url('./assets/images/image-web-3-desktop.jpg');
+        background-position: center;
+        background-size: cover;
+    }
+    .image> img{
+        display: none;
+        
+    }
+    .info{
+        grid-area:1/3/3/-1;
+        margin-bottom: 0px;
+    }
+    #heading{
+        grid-area: 2/1/3/2;
+    }
+    .passage{
+        grid-area: 2/2/3/3;
+    }
+    .arrays{
+        display: flex;
+        grid-area: 3/1/4/-1;
+        gap: 25px;
+    }
+    .item{
+        margin-bottom: 10px;
+    }
+    .item img{
+        height: 100%;
+    }
+}
